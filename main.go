@@ -21,7 +21,7 @@ func main() {
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
-	people := generatePeople(10)
+	people := generatePeople(40)
 	jsonData, err := json.Marshal(people)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
