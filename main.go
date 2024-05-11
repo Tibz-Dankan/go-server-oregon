@@ -28,6 +28,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	log.Println("Getting random people...")
 	w.Header().Set("Content-Type", "application/json")
 	w.Write(jsonData)
 }
